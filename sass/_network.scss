@@ -1,0 +1,45 @@
+.network {
+    display: flex;
+    width: 206px;
+    justify-content: space-between;
+    margin: auto;
+
+    &--left {
+        margin-left: 0;
+    }
+}
+
+.network__svg {
+    fill: rgba(175, 177, 184, 1);
+    background-color: $active-text-color;
+
+    display: flex;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover, &:active {
+        background-color: $accent-text-color;
+        fill: $active-text-color;
+    }
+
+    &--color {
+        fill: $active-text-color;
+        background-color: rgba(255, 255, 255, 0.1);
+        transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    &--color:hover, &--color:focus {
+        background-color: $accent-text-color;
+    }
+}
+
+.network__icon {
+    display: block;
+    width: 20px;
+    height: 20px;
+}
+
