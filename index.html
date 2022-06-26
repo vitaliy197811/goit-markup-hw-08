@@ -14,22 +14,34 @@
     <!--шапка-->
     <header>
         <div class="container header">
-            <nav class="header__nav">
-                <a class="logo" href="./index.html">Web<span class="logo--black">Studio</span></a>
+            <a class="logo"  href="./index.html">Web<span class="logo--black">Studio</span></a>
+            <button type="button" class="header__button" data-menu-button aria-expanded="false" aria-controls="header__menu">
+                <svg width="40px" height="40px" aria-label="Переключатель мобильного меню">
+                    <use class="header__men" href="./images/symbol-defs.svg#menu"></use>
+                    <use class="header__close" href="./images/symbol-defs.svg#close-heder"></use>
+                </svg>
+            </button>                                    
+            <nav class="header__nav" data-menu>                              
                 <ul class="header__menu">
                     <li class=""><a class="header__link header__link--color header__link--line" href="./index.html">Студия</a></li>
                     <li class=""><a class="header__link" href="./portfolio.html">Портфолио</a></li>
                     <li class=""><a class="header__link" href="">Контакты</a></li>
                 </ul>
-            </nav>
-            <ul class="header__contact">
-                <li><a class="header__communication" href="mailto:info@devstudio.com"><svg class="header__icon">
-                            <use href="./images/symbol-defs.svg#envelope"></use>
-                        </svg>info@devstudio.com</a></li>
-                <li><a class="header__communication" href="tel:+380961111111"><svg class="header__icon header__icon--size">
-                            <use href="./images/symbol-defs.svg#smartphone"></use>
-                        </svg>+38 096 111 11 11</a></li>
-            </ul>
+                <ul class="header__contact">
+                    <li class="header__mail"><a class="header__communication" href="mailto:info@devstudio.com"><svg class="header__icon">
+                                <use href="./images/symbol-defs.svg#envelope"></use>
+                            </svg>info@devstudio.com</a></li>
+                    <li class="header__tel"><a class="header__communication" href="tel:+380961111111"><svg class="header__icon header__icon--size">
+                                <use href="./images/symbol-defs.svg#smartphone"></use>
+                            </svg>+38 096 111 11 11</a></li>
+                </ul>
+                <ul class="header__network">
+                    <li><a href="" class="">Instagram</a></li>
+                    <li><a href="" class="">Twitter</a></li>
+                    <li><a href="" class="">Facebook</a></li>
+                    <li><a href="" class="">LinkedIn</a></li>
+                </ul>
+            </nav>            
         </div>
     </header>
     <main>
@@ -89,53 +101,77 @@
             <div class="container">
                 <h2 class="team__title">Наша команда</h2>
                 <ul class="team__box">
-                    <li class="team__employee"><img src="./images/employee1.jpg" width="270" alt="Игорь Демьяненко">
-                    <div class="team__card">
-                        <h3 class="team__name">Игорь Демьяненко</h3>
-                        <p class="team__profession" lang="en">Product Designer</p>
-                        <ul class="network">
-                            <li><a href="" class="network__svg"><svg class="network__icon"><use href="./images/symbol-defs.svg#instagram"></use></svg></a></li>
-                            <li><a href="" class="network__svg"><svg class="network__icon"><use href="./images/symbol-defs.svg#twitter"></use></svg></a></li>
-                            <li><a href="" class="network__svg"><svg class="network__icon"><use href="./images/symbol-defs.svg#facebook"></use></svg></a></li>
-                            <li><a href="" class="network__svg"><svg class="network__icon"><use href="./images/symbol-defs.svg#linkedin"></use></svg></a></li>
-                        </ul>
-                    </div>
+                    <li class="team__employee"><img 
+                        srcset="./images/employee1-270.jpg 270w, 
+                                ./images/employee1-540.jpg 540w, 
+                                ./images/employee1-810.jpg 810w, 
+                                ./images/employee1-1080.jpg 1080w" 
+                        src="./images/employee1-270.jpg" alt="Игорь Демьяненко"
+                        sizes="(min-width: 769px) 25vw, (min-width: 481px) 50vw, 100vw"/>
+                        <div class="team__card">
+                            <h3 class="team__name">Игорь Демьяненко</h3>
+                            <p class="team__profession" lang="en">Product Designer</p>
+                            <ul class="network">
+                                <li><a href="" class="network__svg"><svg class="network__icon"><use href="./images/symbol-defs.svg#instagram"></use></svg></a></li>
+                                <li><a href="" class="network__svg"><svg class="network__icon"><use href="./images/symbol-defs.svg#twitter"></use></svg></a></li>
+                                <li><a href="" class="network__svg"><svg class="network__icon"><use href="./images/symbol-defs.svg#facebook"></use></svg></a></li>
+                                <li><a href="" class="network__svg"><svg class="network__icon"><use href="./images/symbol-defs.svg#linkedin"></use></svg></a></li>
+                            </ul>
+                        </div>
                     </li>
-                    <li class="team__employee"><img src="./images/employee2.jpg" width="270" alt="Ольга Репина">
-                    <div class="team__card">
-                        <h3 class="team__name">Ольга Репина</h3>
-                        <p class="team__profession" lang="en">Frontend Developer</p>
-                        <ul class="network">
-                            <li><a href="" class="network__svg"><svg class="network__icon"><use href="./images/symbol-defs.svg#instagram"></use></svg></a></li>
-                            <li><a href="" class="network__svg"><svg class="network__icon"><use href="./images/symbol-defs.svg#twitter"></use></svg></a></li>
-                            <li><a href="" class="network__svg"><svg class="network__icon"><use href="./images/symbol-defs.svg#facebook"></use></svg></a></li>
-                            <li><a href="" class="network__svg"><svg class="network__icon"><use href="./images/symbol-defs.svg#linkedin"></use></svg></a></li>
-                        </ul>
-                    </div>
+                    <li class="team__employee"><img 
+                        srcset="./images/employee2-270.jpg 270w, 
+                                ./images/employee2-540.jpg 540w, 
+                                ./images/employee2-810.jpg 810w, 
+                                ./images/employee2-1080.jpg 1080w" 
+                        src="./images/employee2-270.jpg" alt="Ольга Репина"
+                        sizes="(min-width: 769px) 25vw, (min-width: 481px) 50vw, 100vw"/>
+                        <div class="team__card">
+                            <h3 class="team__name">Ольга Репина</h3>
+                            <p class="team__profession" lang="en">Frontend Developer</p>
+                            <ul class="network">
+                                <li><a href="" class="network__svg"><svg class="network__icon"><use href="./images/symbol-defs.svg#instagram"></use></svg></a></li>
+                                <li><a href="" class="network__svg"><svg class="network__icon"><use href="./images/symbol-defs.svg#twitter"></use></svg></a></li>
+                                <li><a href="" class="network__svg"><svg class="network__icon"><use href="./images/symbol-defs.svg#facebook"></use></svg></a></li>
+                                <li><a href="" class="network__svg"><svg class="network__icon"><use href="./images/symbol-defs.svg#linkedin"></use></svg></a></li>
+                            </ul>
+                        </div>
                     </li>
-                    <li class="team__employee"><img src="./images/employee3.jpg" width="270" alt="Николай Тарасов">
-                    <div class="team__card">
-                        <h3 class="team__name">Николай Тарасов</h3>
-                        <p class="team__profession" lang="en">Marketing</p>
-                        <ul class="network">
-                            <li><a href="" class="network__svg"><svg class="network__icon"><use href="./images/symbol-defs.svg#instagram"></use></svg></a></li>
-                            <li><a href="" class="network__svg"><svg class="network__icon"><use href="./images/symbol-defs.svg#twitter"></use></svg></a></li>
-                            <li><a href="" class="network__svg"><svg class="network__icon"><use href="./images/symbol-defs.svg#facebook"></use></svg></a></li>
-                            <li><a href="" class="network__svg"><svg class="network__icon"><use href="./images/symbol-defs.svg#linkedin"></use></svg></a></li>
-                        </ul>
-                    </div>
+                    <li class="team__employee"><img 
+                        srcset="./images/employee3-270.jpg 270w, 
+                                ./images/employee3-540.jpg 540w, 
+                                ./images/employee3-810.jpg 810w, 
+                                ./images/employee3-1080.jpg 1080w" 
+                        src="./images/employee3-270.jpg" alt="Николай Тарасов"
+                        sizes="(min-width: 769px) 25vw, (min-width: 481px) 50vw, 100vw"/>
+                        <div class="team__card">
+                            <h3 class="team__name">Николай Тарасов</h3>
+                            <p class="team__profession" lang="en">Marketing</p>
+                            <ul class="network">
+                                <li><a href="" class="network__svg"><svg class="network__icon"><use href="./images/symbol-defs.svg#instagram"></use></svg></a></li>
+                                <li><a href="" class="network__svg"><svg class="network__icon"><use href="./images/symbol-defs.svg#twitter"></use></svg></a></li>
+                                <li><a href="" class="network__svg"><svg class="network__icon"><use href="./images/symbol-defs.svg#facebook"></use></svg></a></li>
+                                <li><a href="" class="network__svg"><svg class="network__icon"><use href="./images/symbol-defs.svg#linkedin"></use></svg></a></li>
+                            </ul>
+                        </div>
                     </li>
-                    <li class="team__employee"><img src="./images/employee4.jpg" width="270" alt="Михаил Ермаков">
-                    <div class="team__card">
-                        <h3 class="team__name">Михаил Ермаков</h3>
-                        <p class="team__profession" lang="en">UI Designer</p>
-                        <ul class="network">
-                            <li><a href="" class="network__svg"><svg class="network__icon"><use href="./images/symbol-defs.svg#instagram"></use></svg></a></li>
-                            <li><a href="" class="network__svg"><svg class="network__icon"><use href="./images/symbol-defs.svg#twitter"></use></svg></a></li>
-                            <li><a href="" class="network__svg"><svg class="network__icon"><use href="./images/symbol-defs.svg#facebook"></use></svg></a></li>
-                            <li><a href="" class="network__svg"><svg class="network__icon"><use href="./images/symbol-defs.svg#linkedin"></use></svg></a></li>
-                        </ul>
-                    </div>
+                    <li class="team__employee"><img 
+                        srcset="./images/employee4-270.jpg 270w, 
+                                ./images/employee4-540.jpg 540w, 
+                                ./images/employee4-810.jpg 810w, 
+                                ./images/employee4-1080.jpg 1080w" 
+                        src="./images/employee4-270.jpg" alt="Михаил Ермаков"
+                        sizes="(min-width: 769px) 25vw, (min-width: 481px) 50vw, 100vw"/>
+                        <div class="team__card">
+                            <h3 class="team__name">Михаил Ермаков</h3>
+                            <p class="team__profession" lang="en">UI Designer</p>
+                            <ul class="network">
+                                <li><a href="" class="network__svg"><svg class="network__icon"><use href="./images/symbol-defs.svg#instagram"></use></svg></a></li>
+                                <li><a href="" class="network__svg"><svg class="network__icon"><use href="./images/symbol-defs.svg#twitter"></use></svg></a></li>
+                                <li><a href="" class="network__svg"><svg class="network__icon"><use href="./images/symbol-defs.svg#facebook"></use></svg></a></li>
+                                <li><a href="" class="network__svg"><svg class="network__icon"><use href="./images/symbol-defs.svg#linkedin"></use></svg></a></li>
+                            </ul>
+                        </div>
                     </li>
                 </ul>
             </div>
@@ -145,12 +181,12 @@
             <div class="container">
                 <h2 class="clients__title">Постоянные клиенты</h2>
                 <ul class="clients__box">
-                    <li><a class="clients__site" href=""><svg class="clients__icon"><use href="./images/symbol-defs.svg#company1"></use></svg></a></li>
-                    <li><a class="clients__site" href=""><svg class="clients__icon"><use href="./images/symbol-defs.svg#company2"></use></svg></a></li>
-                    <li><a class="clients__site" href=""><svg class="clients__icon"><use href="./images/symbol-defs.svg#company3"></use></svg></a></li>
-                    <li><a class="clients__site" href=""><svg class="clients__icon"><use href="./images/symbol-defs.svg#company4"></use></svg></a></li>
-                    <li><a class="clients__site" href=""><svg class="clients__icon"><use href="./images/symbol-defs.svg#company5"></use></svg></a></li>
-                    <li><a class="clients__site" href=""><svg class="clients__icon"><use href="./images/symbol-defs.svg#company6"></use></svg></a></li>
+                    <li class="clients__site"><a href=""><svg class="clients__icon"><use href="./images/symbol-defs.svg#company1"></use></svg></a></li>
+                    <li class="clients__site"><a href=""><svg class="clients__icon"><use href="./images/symbol-defs.svg#company2"></use></svg></a></li>
+                    <li class="clients__site"><a href=""><svg class="clients__icon"><use href="./images/symbol-defs.svg#company3"></use></svg></a></li>
+                    <li class="clients__site"><a href=""><svg class="clients__icon"><use href="./images/symbol-defs.svg#company4"></use></svg></a></li>
+                    <li class="clients__site"><a href=""><svg class="clients__icon"><use href="./images/symbol-defs.svg#company5"></use></svg></a></li>
+                    <li class="clients__site"><a href=""><svg class="clients__icon"><use href="./images/symbol-defs.svg#company6"></use></svg></a></li>
                 </ul>
             </div>
         </section>
@@ -159,7 +195,7 @@
         <div class="container">
             <div class="footer">
                 <div class="footer__box">
-                    <a class="logo" href="./index.html">Web<span class="logo--white">Studio</span></a>
+                    <a class="logo footer__logo" href="./index.html">Web<span class="logo--white">Studio</span></a>
                     <address>
                         <ul class="footer__address">
                             <li><a class="footer__contact" href="https://goo.gl/maps/jAV8vngoX1ZqWARp7">г.Киев, пр-т Леси Украинки, 26</a></li>
@@ -219,5 +255,6 @@
         </div>
     </div>
     <script src="./js/modal.js"></script>
+    <script src="./js/mobile-menu.js"></script>
 </body>
 </html>

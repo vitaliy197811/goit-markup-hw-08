@@ -1,3 +1,14 @@
+.activity {
+    @media screen and (max-width: 480px) {
+        display: none;        
+    }
+
+    @media screen and (min-width: 481px) and (max-width: 768px) {
+        display: none;
+    }
+}
+
+
 .activity__title {
     color: $primary-text-color;
 
@@ -16,7 +27,7 @@
     justify-content: space-between;
     margin-top: 50px;
     margin: 0;
-    padding: 0;
+    padding: 0;    
 }
 
 .activity__card {

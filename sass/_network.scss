@@ -4,9 +4,13 @@
     justify-content: space-between;
     margin: auto;
 
-    &--left {
-        margin-left: 0;
-    }
+    @media screen and (min-width: 769px) {        
+        text-align: center;
+        
+        &--left {
+            margin-left: 0;
+        }
+    }    
 }
 
 .network__svg {

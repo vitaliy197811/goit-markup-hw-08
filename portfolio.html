@@ -14,22 +14,34 @@
     <!--шапка-->
     <header>
         <div class="container header">
-            <nav class="header__nav">
-                <a class="logo" href="./index.html">Web<span class="logo--black">Studio</span></a>
+            <a class="logo"  href="./index.html">Web<span class="logo--black">Studio</span></a>
+            <button type="button" class="header__button" data-menu-button aria-expanded="false" aria-controls="header__menu">
+                <svg width="40px" height="40px" aria-label="Переключатель мобильного меню">
+                    <use class="header__men" href="./images/symbol-defs.svg#menu"></use>
+                    <use class="header__close" href="./images/symbol-defs.svg#close-heder"></use>
+                </svg>
+            </button>                                    
+            <nav class="header__nav" data-menu>                              
                 <ul class="header__menu">
                     <li class=""><a class="header__link" href="./index.html">Студия</a></li>
                     <li class=""><a class="header__link header__link--color header__link--line" href="./portfolio.html">Портфолио</a></li>
                     <li class=""><a class="header__link" href="">Контакты</a></li>
                 </ul>
-            </nav>
-            <ul class="header__contact">
-                <li><a class="header__communication" href="mailto:info@devstudio.com"><svg class="header__icon">
-                            <use href="./images/symbol-defs.svg#envelope"></use>
-                        </svg>info@devstudio.com</a></li>
-                <li><a class="header__communication" href="tel:+380961111111"><svg class="header__icon header__icon--size">
-                            <use href="./images/symbol-defs.svg#smartphone"></use>
-                        </svg>+38 096 111 11 11</a></li>
-            </ul>
+                <ul class="header__contact">
+                    <li class="header__mail"><a class="header__communication" href="mailto:info@devstudio.com"><svg class="header__icon">
+                                <use href="./images/symbol-defs.svg#envelope"></use>
+                            </svg>info@devstudio.com</a></li>
+                    <li class="header__tel"><a class="header__communication" href="tel:+380961111111"><svg class="header__icon header__icon--size">
+                                <use href="./images/symbol-defs.svg#smartphone"></use>
+                            </svg>+38 096 111 11 11</a></li>
+                </ul>
+                <ul class="header__network">
+                    <li><a href="" class="">Instagram</a></li>
+                    <li><a href="" class="">Twitter</a></li>
+                    <li><a href="" class="">Facebook</a></li>
+                    <li><a href="" class="">LinkedIn</a></li>
+                </ul>
+            </nav>            
         </div>
     </header>
     <main>
@@ -38,16 +50,21 @@
                 <!--фильтр-->
                 <h1 class="filter__title">Наши работы</h1>
                 <ul class="filter__box">
-                    <li class=""><button type="button" class="filter__button">Все</button></li>
-                    <li class=""><button type="button" class="filter__button">Веб-сайты</button></li>
-                    <li class=""><button type="button" class="filter__button">Приложения</button></li>
-                    <li class=""><button type="button" class="filter__button">Дизайн</button></li>
-                    <li class=""><button type="button" class="filter__button">Маркетинг</button></li>
+                    <li class="filter__item"><button type="button" class="filter__button">Все</button></li>
+                    <li class="filter__item"><button type="button" class="filter__button">Веб-сайты</button></li>
+                    <li class="filter__item"><button type="button" class="filter__button">Приложения</button></li>
+                    <li class="filter__item"><button type="button" class="filter__button">Дизайн</button></li>
+                    <li class="filter__item"><button type="button" class="filter__button">Маркетинг</button></li>
                 </ul>
                 <!--список работ-->
                 <ul class="work">
                     <li class="work__box"><a class="work__link" href="">
-                        <div class="work__window"><img src="./images/techno.jpg" width="370" alt="Ноутбук со страницей веб-сайта">
+                        <div class="work__window"><img 
+                            srcset="./images/techno-370.jpg 370w, 
+                                    ./images/techno-740.jpg 740w,
+                                    ./images/techno-1110.jpg 1110w" 
+                            src="./images/techno-370.jpg" alt="Ноутбук со страницей веб-сайта"
+                            sizes="(min-width: 769px) 33vw, (min-width: 481px) 50vw, 100vw"/>
                             <div class="work__card">
                                 <p class="work__overlay">Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это позволит посетителю получить
                                 исчерпывающие сведения о компании или частном лице.</p>
@@ -59,7 +76,12 @@
                         </div></a>
                     </li>
                     <li class="work__box"><a class="work__link" href="">
-                        <div class="work__window"><img src="./images/new-orlean.jpg" width="370" alt="Постер">
+                        <div class="work__window"><img 
+                            srcset="./images/new-orlean-370.jpg 370w, 
+                                    ./images/new-orlean-740.jpg 740w,
+                                    ./images/new-orlean-1110.jpg 1110w" 
+                            src="./images/new-orlean-370.jpg" alt="Постер"
+                            sizes="(min-width: 769px) 33vw, (min-width: 481px) 50vw, 100vw"/>
                             <div class="work__card">
                                 <p class="work__overlay">Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это позволит посетителю получить
                                 исчерпывающие сведения о компании или частном лице.</p>
@@ -71,7 +93,12 @@
                         </div></a>
                     </li>
                     <li class="work__box"><a class="work__link" href="">
-                        <div class="work__window"><img src="./images/seafood.jpg" width="370" alt="Логотип ресторана">
+                        <div class="work__window"><img 
+                            srcset="./images/seafood-370.jpg 370w, 
+                                    ./images/seafood-740.jpg 740w,
+                                    ./images/seafood-1110.jpg 1110w" 
+                            src="./images/seafood-370.jpg" alt="Логотип ресторана"
+                            sizes="(min-width: 769px) 33vw, (min-width: 481px) 50vw, 100vw"/>
                             <div class="work__card">
                                 <p class="work__overlay">Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это позволит посетителю получить
                                 исчерпывающие сведения о компании или частном лице.</p>
@@ -83,7 +110,12 @@
                         </div></a>
                     </li>
                     <li class="work__box"><a class="work__link" href="">
-                        <div class="work__window"><img src="./images/prime.jpg" width="370" alt="Наушники">
+                        <div class="work__window"><img 
+                            srcset="./images/prime-370.jpg 370w, 
+                                    ./images/prime-740.jpg 740w,
+                                    ./images/prime-1110.jpg 1110w" 
+                            src="./images/prime-370.jpg" alt="Наушники"
+                            sizes="(min-width: 769px) 33vw, (min-width: 481px) 50vw, 100vw"/>
                             <div class="work__card">
                                 <p class="work__overlay">Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это позволит посетителю получить
                                 исчерпывающие сведения о компании или частном лице.</p>
@@ -95,7 +127,12 @@
                         </div></a>
                     </li>
                     <li class="work__box"><a class="work__link" href="">
-                        <div class="work__window"><img src="./images/boxes.jpg" width="370" alt="Коробки">
+                        <div class="work__window"><img 
+                            srcset="./images/boxes-370.jpg 370w, 
+                                    ./images/boxes-740.jpg 740w,
+                                    ./images/boxes-1110.jpg 1110w" 
+                            src="./images/boxes-370.jpg" alt="Коробки"
+                            sizes="(min-width: 769px) 33vw, (min-width: 481px) 50vw, 100vw"/>
                             <div class="work__card">
                                 <p class="work__overlay">Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это позволит посетителю получить
                                 исчерпывающие сведения о компании или частном лице.</p>
@@ -108,7 +145,12 @@
                         
                     </li>
                     <li class="work__box"><a class="work__link" href="">
-                        <div class="work__window"><img src="./images/borders.jpg" width="370" alt="Монитор со страницей веб-сайта">
+                        <div class="work__window"><img 
+                            srcset="./images/borders-370.jpg 370w, 
+                                    ./images/borders-740.jpg 740w,
+                                    ./images/borders-1110.jpg 1110w" 
+                            src="./images/borders-370.jpg" alt="Монитор со страницей веб-сайта"
+                            sizes="(min-width: 769px) 33vw, (min-width: 481px) 50vw, 100vw"/>
                             <div class="work__card">
                                 <p class="work__overlay">Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это позволит посетителю получить
                                 исчерпывающие сведения о компании или частном лице.</p>
@@ -120,7 +162,12 @@
                         </div></a>
                     </li>
                     <li class="work__box"><a class="work__link" href="">
-                        <div class="work__window"><img src="./images/limited.jpg" width="370" alt="Журнал">
+                        <div class="work__window"><img 
+                            srcset="./images/limited-370.jpg 370w, 
+                                    ./images/limited-740.jpg 740w,
+                                    ./images/limited-1110.jpg 1110w" 
+                            src="./images/limited-370.jpg" alt="Журнал"
+                            sizes="(min-width: 769px) 33vw, (min-width: 481px) 50vw, 100vw"/>
                             <div class="work__card">
                                 <p class="work__overlay">Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это позволит посетителю получить
                                 исчерпывающие сведения о компании или частном лице.</p>
@@ -132,7 +179,12 @@
                         </div></a>
                     </li>
                     <li class="work__box"><a class="work__link" href="">
-                        <div class="work__window"><img src="./images/lab.jpg" width="370" alt="Бирка товара">
+                        <div class="work__window"><img 
+                            srcset="./images/lab-370.jpg 370w, 
+                                    ./images/lab-740.jpg 740w,
+                                    ./images/lab-1110.jpg 1110w" 
+                            src="./images/lab-370.jpg" alt="Бирка товара"
+                            sizes="(min-width: 769px) 33vw, (min-width: 481px) 50vw, 100vw"/>
                             <div class="work__card">
                                 <p class="work__overlay">Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это позволит посетителю получить
                                 исчерпывающие сведения о компании или частном лице.</p>
@@ -144,7 +196,12 @@
                         </div></a>
                     </li>
                     <li class="work__box"><a class="work__link" href="">
-                        <div class="work__window"><img src="./images/business.jpg" width="370" alt="Фото приложения">
+                        <div class="work__window"><img 
+                            srcset="./images/business-370.jpg 370w, 
+                                    ./images/business-740.jpg 740w,
+                                    ./images/business-1110.jpg 1110w" 
+                            src="./images/business-370.jpg" alt="Фото приложения"
+                            sizes="(min-width: 769px) 33vw, (min-width: 481px) 50vw, 100vw"/>
                             <div class="work__card">
                                 <p class="work__overlay">Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это позволит посетителю получить
                                 исчерпывающие сведения о компании или частном лице.</p>
@@ -163,46 +220,36 @@
         <div class="container">
             <div class="footer">
                 <div class="footer__box">
-                    <a class="logo" href="./index.html">Web<span class="logo--white">Studio</span></a>
+                    <a class="logo footer__logo" href="./index.html">Web<span class="logo--white">Studio</span></a>
                     <address>
                         <ul class="footer__address">
-                            <li><a class="footer__contact" href="https://goo.gl/maps/jAV8vngoX1ZqWARp7">г.Киев, пр-т Леси
-                                    Украинки, 26</a></li>
-                            <li><a class="footer__contact footer__contact--color"
-                                    href="mailto:info@example.com">info@example.com</a></li>
-                            <li><a class="footer__contact footer__contact--color" href="tel:+380991111111">+38 099 111 11
-                                    11</a></li>
+                            <li><a class="footer__contact" href="https://goo.gl/maps/jAV8vngoX1ZqWARp7">г.Киев, пр-т Леси Украинки, 26</a></li>
+                            <li><a class="footer__contact footer__contact--color" href="mailto:info@example.com">info@example.com</a></li>
+                            <li><a class="footer__contact footer__contact--color" href="tel:+380991111111">+38 099 111 11 11</a></li>
                         </ul>
                     </address>
                 </div>
                 <div class="footer__social">
                     <h3 class="footer__title">присоединяйтесь</h3>
                     <ul class="network network--left">
-                        <li><a href="" class="network__svg network__svg--color"><svg class="network__icon">
-                                    <use href="./images/symbol-defs.svg#instagram"></use>
-                                </svg></a></li>
-                        <li><a href="" class="network__svg network__svg--color"><svg class="network__icon">
-                                    <use href="./images/symbol-defs.svg#twitter"></use>
-                                </svg></a></li>
-                        <li><a href="" class="network__svg network__svg--color"><svg class="network__icon">
-                                    <use href="./images/symbol-defs.svg#facebook"></use>
-                                </svg></a></li>
-                        <li><a href="" class="network__svg network__svg--color"><svg class="network__icon">
-                                    <use href="./images/symbol-defs.svg#linkedin"></use>
-                                </svg></a></li>
+                        <li><a href="" class="network__svg network__svg--color"><svg class="network__icon"><use href="./images/symbol-defs.svg#instagram"></use></svg></a></li>
+                        <li><a href="" class="network__svg network__svg--color"><svg class="network__icon"><use href="./images/symbol-defs.svg#twitter"></use></svg></a></li>
+                        <li><a href="" class="network__svg network__svg--color"><svg class="network__icon"><use href="./images/symbol-defs.svg#facebook"></use></svg></a></li>
+                        <li><a href="" class="network__svg network__svg--color"><svg class="network__icon"><use href="./images/symbol-defs.svg#linkedin"></use></svg></a></li>
                     </ul>
                 </div>
                 <div class="footer__form">
                     <h3 class="footer__title">Подпишитесь на рассылку</h3>
                     <form class="footer__subscrib">
-                        <input class="footer__input" type="email" name="email" required placeholder="E-mail" />
+                        <input class="footer__input" type="email" name="email" required placeholder="E-mail"/>
                         <button class="footer__button" type="submit">Подписаться<svg class="footer__icon">
-                                <use href="./images/symbol-defs.svg#airplane"></use>
-                            </svg></button>
+                            <use href="./images/symbol-defs.svg#airplane"></use>
+                        </svg></button>
                     </form>
                 </div>
             </div>
         </div>
     </footer>
+    <script src="./js/mobile-menu.js"></script>
 </body>
 </html>

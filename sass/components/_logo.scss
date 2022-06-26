@@ -1,19 +1,25 @@
 .logo {
-    color: $accent-text-color;
-
     display: block;
-
+    color: $accent-text-color;
     font-family: Raleway, sans-serif;
     font-size: 26px;
     line-height: 1.19;
     letter-spacing: 0.03em;
+    opacity: 1;
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
-    &--black {
-        color: $primary-text-color;
+    &--black {        
+        color: $primary-text-color;        
     }
 
-    &--white {
-        color: $active-text-color;
+    &--white {        
+        color: $active-text-color;        
+    }
+
+    @media screen and (max-width: 480px) {
+        .header__nav.is-open & {
+            opacity: 0;
+        }
     }
 }
 
