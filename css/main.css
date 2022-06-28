@@ -355,7 +355,7 @@ header {
     position: absolute;
     left: 0;
     top: 48px;
-    width: 100%;
+    width: 100vw;
     height: 748px;
     opacity: 0;
     pointer-events: none;
@@ -367,6 +367,7 @@ header {
     opacity: 1;
     pointer-events: painted;
     z-index: 100;
+    position: fixed;
   }
 }
 @media screen and (min-width: 481px) and (max-width: 768px) {
@@ -837,6 +838,11 @@ header {
   text-transform: uppercase;
   margin-bottom: 10px;
 }
+@media screen and (max-width: 480px) {
+  .quality__title {
+    text-align: center;
+  }
+}
 
 .quality__item {
   color: #757575;
@@ -873,6 +879,7 @@ header {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  width: 100%;
   margin-top: 50px;
   margin: 0;
   padding: 0;
@@ -881,6 +888,7 @@ header {
 .activity__card {
   display: flex;
   position: relative;
+  width: 370px;
 }
 
 .activity__item {
@@ -1619,11 +1627,17 @@ textarea:focus {
 
 .filter__item {
   margin-right: 8px;
-  margin-bottom: 15px;
 }
 .filter__item:last-child {
   margin-right: 0;
-  margin-bottom: 0;
+}
+@media screen and (max-width: 480px) {
+  .filter__item {
+    margin-bottom: 15px;
+  }
+  .filter__item:nth-last-child(-n+2) {
+    margin-bottom: 0;
+  }
 }
 
 .filter__button {

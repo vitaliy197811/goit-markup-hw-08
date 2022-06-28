@@ -15,13 +15,13 @@
     <header>
         <div class="container header">
             <a class="logo"  href="./index.html">Web<span class="logo--black">Studio</span></a>
-            <button type="button" class="header__button" data-menu-button aria-expanded="false" aria-controls="header__menu">
+            <button type="button" class="header__button" data-menu-button aria-expanded="false" aria-controls="header__nav">
                 <svg width="40px" height="40px" aria-label="Переключатель мобильного меню">
                     <use class="header__men" href="./images/symbol-defs.svg#menu"></use>
                     <use class="header__close" href="./images/symbol-defs.svg#close-heder"></use>
                 </svg>
-            </button>                                    
-            <nav class="header__nav" data-menu>                              
+            </button>
+            <nav class="header__nav" data-menu id="header__nav">
                 <ul class="header__menu">
                     <li class=""><a class="header__link header__link--color header__link--line" href="./index.html">Студия</a></li>
                     <li class=""><a class="header__link" href="./portfolio.html">Портфолио</a></li>
@@ -41,7 +41,7 @@
                     <li><a href="" class="">Facebook</a></li>
                     <li><a href="" class="">LinkedIn</a></li>
                 </ul>
-            </nav>            
+            </nav>
         </div>
     </header>
     <main>
@@ -84,13 +84,22 @@
             <div class="container">
                 <h2 class="activity__title">Чем мы занимаемся</h2>
                 <ul class="activity__box">
-                    <li class="activity__card"><a href=""><img src="./images/computer.png" width="370" alt="компьютеры">
+                    <li class="activity__card"><a href=""><img 
+                        srcset="./images/computer-370.png 1x, 
+                                ./images/computer-740.png 2x"
+                        src="./images/computer-370.png" alt="компьютеры">
                         <div class="activity__item"><h3>Десктопные приложения</h3></div></a>
                     </li>
-                    <li class="activity__card"><a href=""><img src="./images/laptop.png" width="370" alt="ноутбуки">
+                    <li class="activity__card"><a href=""><img 
+                        srcset="./images/laptop-370.png 1x, 
+                                ./images/laptop-740.png 2x"
+                        src="./images/laptop-370.png" alt="ноутбуки">
                         <div class="activity__item"><h3>Мобильные приложения</h3></div></a>
                     </li>
-                    <li class="activity__card"><a href=""><img src="./images/tablet.png" width="370" alt="планшеты">
+                    <li class="activity__card"><a href=""><img 
+                        srcset="./images/tablet-370.png 1x, 
+                                ./images/tablet-740.png 2x"
+                        src="./images/tablet-370.png" alt="планшеты">
                         <div class="activity__item"><h3>Дизайнерские решения</h3></div></a>
                     </li>
                 </ul>

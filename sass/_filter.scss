@@ -17,28 +17,34 @@
     padding: 0;
 
     @media screen and (max-width: 480px) {
-        width: 450px;        
+        width: 450px;
     }
 
     @media screen and (min-width: 481px) {
         flex-wrap: nowrap;
-        width: 612px;                   
+        width: 612px;
     }
 }
 
 .filter__item {
     margin-right: 8px;
-    margin-bottom: 15px;
 
     &:last-child {
         margin-right: 0;
-        margin-bottom: 0;
+    }
+
+    @media screen and (max-width: 480px) {
+        margin-bottom: 15px;
+        
+        &:nth-last-child(-n+2) {
+            margin-bottom: 0;
+        }
     }
 }
 
 .filter__button {
     color: #212121;
-    background: #F5F4FA;    
+    background: #F5F4FA;
 
     font-family: Roboto, sans-serif;
     font-size: 16px;
