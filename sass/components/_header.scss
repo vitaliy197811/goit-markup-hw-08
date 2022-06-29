@@ -76,7 +76,7 @@ header {
         cursor: pointer;    
         background-color: $active-text-color;
         fill: $primary-text-color;
-        z-index: 1000;
+        z-index: 10;
 
         &:focus, &:hover{
             fill: $accent-text-color;
