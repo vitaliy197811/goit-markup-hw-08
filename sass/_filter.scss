@@ -7,22 +7,13 @@
 
 .filter__box {
     display: flex;
-    flex-wrap: wrap;
-    /* flex-direction: row; */
-    /* justify-content: space-between; */
-    margin-left: auto;
-    margin-right: auto;
+    flex-wrap: wrap;    
     margin-top: 0;
     margin-bottom: 50px;
     padding: 0;
-
-    @media screen and (max-width: 480px) {
-        width: 450px;
-    }
-
-    @media screen and (min-width: 481px) {
-        flex-wrap: nowrap;
-        width: 612px;
+    
+    @media screen and (min-width: 642px) {
+        justify-content: center;
     }
 }
 
@@ -33,7 +24,7 @@
         margin-right: 0;
     }
 
-    @media screen and (max-width: 480px) {
+    @media screen and (max-width: 641px) {
         margin-bottom: 15px;
         
         &:nth-last-child(-n+2) {

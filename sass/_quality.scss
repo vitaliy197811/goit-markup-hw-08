@@ -60,7 +60,7 @@
     }
 
     @media screen and (max-width: 480px) {
-        width: 450px;
+        width: calc(100vw - 30px);
         margin-bottom: 30px;
 
         &:last-child {
@@ -69,7 +69,7 @@
     }
 
     @media screen and (min-width: 481px) and (max-width: 768px) {
-        width: 354px;
+        width: calc((100vw - 60px) / 2);
         margin-right: 30px;
         margin-bottom: 30px;
         
@@ -83,7 +83,7 @@
     }
 
     @media screen and (min-width: 769px) {
-        width: 270px;
+        width: calc((100vw - 120px) / 4);
         margin-right: 30px;
         margin-bottom: 30px;
 
