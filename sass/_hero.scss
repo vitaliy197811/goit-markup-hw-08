@@ -22,7 +22,7 @@
             background-size: 480px;
     }
 
-    @media screen and (min-width: 481px) and (max-width: 768px),
+    @media screen and (min-width: 481px) and (max-width: 1199px),
         screen and (min-device-pixel-ratio: 1),
         screen and (min-resolution: 96dpi),
         screen and (min-resolution: 1dppx) {
@@ -30,7 +30,7 @@
             background-size: 768px;
         }
 
-    @media screen and (min-width: 481px) and (max-width: 768px),
+    @media screen and (min-width: 481px) and (max-width: 1199px),
         screen and (min-device-pixel-ratio: 2),
         screen and (min-resolution: 192dpi),
         screen and (min-resolution: 2dppx) {
@@ -38,7 +38,7 @@
             background-size: 768px;
         }
     
-    @media screen and (min-width: 769px),
+    @media screen and (min-width: 1200px),
         screen and (min-device-pixel-ratio: 1),
         screen and (min-resolution: 96dpi),
         screen and (min-resolution: 1dppx) {
@@ -48,7 +48,7 @@
             padding-bottom: 200px;
         }
 
-    @media screen and (min-width: 769px),
+    @media screen and (min-width: 1200px),
         screen and (min-device-pixel-ratio: 2),
         screen and (min-resolution: 192dpi),
         screen and (min-resolution: 2dppx) {
@@ -73,7 +73,7 @@
     letter-spacing: 0.06em;
     text-transform: uppercase;
 
-    @media screen and (min-width: 769px) {
+    @media screen and (min-width: 1200px) {
         font-size: 44px;
         max-width: 696px;
     }

@@ -20,6 +20,10 @@
     display: flex;
     flex-wrap: wrap;
     max-width: 1170px;
+
+    @media screen and (min-width: 1200px) {
+        flex-wrap: nowrap;
+    }
 }
 
 .clients__site {
@@ -51,7 +55,7 @@
         }
     }
 
-    @media screen and (min-width: 481px) and (max-width: 768px) {
+    @media screen and (min-width: 481px) and (max-width: 1199px) {
         width: calc((100vw - 90px) / 3);
         margin-bottom: 30px;        
 
@@ -64,7 +68,7 @@
         }
     }
 
-    @media screen and (min-width: 769px) {
+    @media screen and (min-width: 1200px) {
         width: calc((100vw - 180px) / 6);              
             
         &:last-child {
